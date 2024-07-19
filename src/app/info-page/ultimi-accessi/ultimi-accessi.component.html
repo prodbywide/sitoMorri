@@ -1,0 +1,13 @@
+<!-- Container -->
+<div class="w-full h-full flex p-12 overflow-scroll no-scrollbar">
+   <div class="my-auto">
+
+      <h1 class="text-3xl font-bold opacity-70 mb-8">Ultimi Accessi</h1>
+      
+      <p *ngFor="let accesso of user.UltimiAccessi" class="mb-2">
+         <span class="opacity-60 mr-5"> Accesso effettuato alle: </span>
+         <span class="font-bold"> {{accesso}} </span>
+      </p>
+   
+   </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="w-full h-full grid place-items-center content-center bg-white p-5">
+
+
+      <!-- Immagine profilo -->
+      <div class=" bg-zinc-800 
+                     w-36 h-auto aspect-square 
+                     rounded-full overflow-hidden
+                     drop-shadow-xl
+                     ">
+      
+         <!-- Image -->
+         <img [src]="user.ImgUrl" class="h-full w-auto mx-auto">
+      
+      </div>
+   
+      <!-- Username -->
+      <div class="text-lg font-bold text-center
+                  mt-8"> 
+         {{user.Username}} 
+      </div>
+
+      <!-- Nome e Cognome -->
+      <div class="text-pretty font-light text-center opacity-60
+                  mt-2"> 
+         {{user.NomeCognome}} 
+      </div>
+
+      <!-- Data nascita -->
+      <div class="text font-light text-center opacity-60 
+                  mt-2"> 
+         Nato il {{user.DataNascita}} 
+      </div>
+
+      <!-- Ultimo accesso -->
+      <div class="text font-light text-center opacity-30
+                  mt-6"> 
+         Ultimo accesso: {{user.UltimiAccessi.at(-1)}} 
+      </div>
+
+
+</div>
+

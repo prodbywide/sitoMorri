@@ -1,0 +1,44 @@
+<div class="w-full h-dvh grid grid-cols-2 relative backdrop-blur-3xl backdrop-brightness-90">
+
+   <!-- NAV - 20% -->
+   <div class="w-1/5 h-full bg-zinc-800 bg-opacity-60
+               absolute left-0
+               text-zinc-300
+               grid place-items-center">
+
+      <div class="space-y-4 text-lg text-center">
+         <div class="cursor-pointer hover:brightness-90"><a routerLink="bacheca">Bacheca</a></div>
+         <div class="cursor-pointer hover:brightness-90">Archivio</div>
+         <div class="cursor-pointer hover:brightness-90">Documentazione</div>
+         <div class="cursor-pointer hover:brightness-90">Impostazioni</div>
+      </div>
+
+      <div class="space-y-2 text-sm text-center absolute bottom-12">
+         <div class="cursor-pointer hover:brightness-90"><a routerLink="ultimi-accessi">Ultimi Accessi</a></div>
+         <div class="cursor-pointer hover:text-red-400"><a (click)="goToLogin()">Logout</a></div>
+      </div>
+
+   </div>
+
+   <!-- INFO / FAI CON ROUTER OUTLET DA NAV - 80%  contentente router outlet           {{ info.username }}           -->
+   <div class="w-4/5 h-full absolute right-0">
+      <router-outlet></router-outlet>
+   </div>
+
+   <!-- <div *ngIf="user">
+      <h2>Dettagli utente</h2>
+      <p>Nome: {{ user.NomeCognome }}</p>
+      <p>Data di nascita: {{ user.DataNascita }}</p>
+      <p>Ultimi accessi:</p>
+      <ul>
+        <li *ngFor="let accesso of user.UltimiAccessi">{{ accesso }}</li>
+      </ul>
+    </div>
+    <div *ngIf="!user">
+      <p>Utente non trovato o condizione non soddisfatta.</p>
+    </div> -->
+
+</div>
+
+
+
